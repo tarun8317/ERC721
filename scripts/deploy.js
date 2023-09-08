@@ -9,7 +9,7 @@ async function main() {
   const web3Token = await Web3Token.deploy();
   await web3Token.deploymentTransaction()
 
-  console.log("Web3 Token address:", web3Token.address);
+  console.log("Web3 Token address:", web3Token);
 }
 
 main()

@@ -20,10 +20,15 @@ contract Web3 is ERC721, ERC721Enumerable, Pausable, Ownable {
     Counters.Counter private _tokenIdCounter;
 
     constructor() ERC721("Web3", "WE3") {}
-    
+
     function _baseURI() internal pure override returns (string memory) {
         return "ipfs://QmXuTQuW4vzWpVaH9gVJkAA8zRJyrhUvyeic3MgUJYVUC8/";
     }
+
+    function getMaxSupply() public view returns (uint256) {
+    return maxSupply;
+}
+
 
     function pause() public onlyOwner {
         _pause();
